@@ -72,6 +72,11 @@ class TurtleMotionController:
 
 screen = turtle.Screen()
 screen.setup(width=900, height=600)
+try:
+    # Keep the turtle window above other application windows.
+    screen._root.attributes("-topmost", True)
+except Exception:
+    pass
 
 fit_world_to_height(screen, y_min=0.0, y_max=80.0, margin_frac=0.15)
 draw_ground(y=0)
