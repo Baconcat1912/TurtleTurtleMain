@@ -55,7 +55,7 @@ for tick in range(1,5000):
         Alpha.acceleration = 0
         Beta.final_velo = 0
     #if their height is equal, output the results
-    elif round(float(Alpha.height), 2) == round(float(Beta.height), 2) and info_output == False:
+    elif round(float(Alpha.height), 2) == round(float(Beta.height), 2) and info_output == False and False:#Resolve to false. Remove and False to print again
         print((tick/1000)-0.001)
         print("Alpha's initial velo: ", round(int(Alpha.ini_velo), 2), " final velo: ", round(int(Alpha.final_velo), 2),
               " displacement: ", round(int(Alpha.displacement), 2), " direction: ", Alpha.direction, " acceleration: ",
