@@ -316,25 +316,3 @@ DT = 0.02  # simulation timestep (s) ~50 FPS
 H = 80 #Maximum height of simulation (in this case over 80m)
 
 
-
-
-if __name__ == "__main__":
-    #Example usages
-    screen = turtle.Screen()
-    screen.setup(width=900, height=600)  # Resize it, pretty self-explainatory
-    fit_world_to_height(screen, y_min=0.0, y_max=H, margin_frac=0.15)
-    draw_ground(y=0)  # ground at y=0
-    screen.tracer(0)
-
-    # Draw shit
-    a = drawturtle(0.02, -10, H, 0)  # A at top (80 m), also x axis offset by 10 to avoid colliding
-    b = drawturtle(0.02, 0, 0, 0)  # B at ground
-    screen.update()
-    animateturtle(a, 1)
-    animateturtle(b, 1)
-
-    turtle.done()
-
-
-
-
